@@ -5,11 +5,11 @@ module SqlCraft
     end
 
     def create
-      "CREATE DATABASE #{@name}"
+      "CREATE DATABASE #{@name};"
     end
 
     def drop
-      "DROP DATABASE #{@name}"
+      "DROP DATABASE #{@name};"
     end
   end
 
@@ -25,6 +25,10 @@ module SqlCraft
 
     def create
       "CREATE TABLE #{@name} (#{@columns.join(", ")});"
+    end
+
+    def drop
+      "DROP TABLE #{@name};"
     end
   end
 end
